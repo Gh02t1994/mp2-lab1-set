@@ -33,7 +33,7 @@ TBitField::TBitField(const TBitField &bf) // конструктор копиро
     MemLen = bf.MemLen;
     pMem = new TELEM[MemLen];
 
-    if (pMem != nullptr)
+    if (pMem != NULL)
     {
         for (int i = 0; i < MemLen; ++i)
         {
@@ -100,7 +100,7 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
         {
             MemLen = bf.MemLen;
             
-            if (pMem != nullptr)
+            if (pMem != NULL)
             {
                 delete[] pMem;
             }
@@ -108,7 +108,7 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
             pMem = new TELEM[MemLen];
         }
 
-        if (pMem != nullptr)
+        if (pMem != NULL)
         {
             for (int i = 0; i < MemLen; i++)
             {
