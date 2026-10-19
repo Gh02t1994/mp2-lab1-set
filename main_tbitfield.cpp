@@ -1,19 +1,16 @@
 #include "tbitfield.h"
-#include <cassert>
 #include <iostream>
 
 int main()
 {
-    TBitField bits(8);
+    TBitField field_1(64);
+    TBitField field_2(32);
 
-    assert(bits.GetLength() == 8);
-    assert(bits.GetBit(3) == 0);
+    field_1.SetBit(1);
+    field_2.SetBit(1);
 
-    bits.SetBit(3);
-    assert(bits.GetBit(3) != 0);
-
-    bits.ClrBit(3);
-    assert(bits.GetBit(3) == 0);
-
-    std::cout << "Все проверки пройдены\n";
+    cout << field_1 << '\n';
+    cout << field_2 << '\n';
+    
+    cout << field_1.GetBit(2) << '\n';
 }

@@ -2,7 +2,7 @@
 //
 // tbitfield.cpp - Copyright (c) Гергель В.П. 07.05.2001
 //   Переработано для Microsoft Visual Studio 2008 Сысоевым А.В. (19.04.2015)
-//
+// g++ -Iinclude main_tbitfield.cpp src/tbitfield.cpp -o main_tbitfield.exe
 // Битовое поле
 
 #include "tbitfield.h"
@@ -13,9 +13,11 @@ static TBitField FAKE_BITFIELD(1);
 
 TBitField::TBitField(int len)
 {
-    if (BitLen < 1)
+    if (len < 1)
         throw len;
-    
+
+    BitLen = len;
+
     if (BitLen < 32)
         MemLen = 1;
     else
@@ -85,7 +87,7 @@ int TBitField::GetBit(const int n) const // получить значение б
     if (n < 0 || n >= BitLen)
         throw n;
     else
-        return pMem[GetMemIndex(n)] & GetMemMask(n);
+        return (pMem[GetMemIndex(n)] & GetMemMask(n)) != 0;
 }
 
 // битовые операции
@@ -135,7 +137,7 @@ int TBitField::operator==(const TBitField &bf) const // сравнение
             if (i < MemLen - 1)
                 memMask = 0xffffffff;
             else
-                memMask = (1 << (BitLen % 31));
+                memMask = (1u << (BitLen % 32)) - 1u;
             
             if ((memMask & pMem[i]) != (memMask & bf.pMem[i]))
                 return false;
@@ -188,10 +190,9 @@ TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 
 TBitField TBitField::operator~(void) // отрицание
 {
-    int len = BitLen;
-    TBitField tmp(len);
+    TBitField tmp(BitLen);
 
-    for (int i = 0; i < len; ++i)
+    for (int i = 0; i < MemLen; ++i)
     {
         tmp.pMem[i] = ~pMem[i];
     }
