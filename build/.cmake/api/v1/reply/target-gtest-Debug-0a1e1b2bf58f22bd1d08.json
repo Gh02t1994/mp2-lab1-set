@@ -52,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -arch arm64"
+					"fragment" : "-g -arch arm64"
 				}
 			],
 			"includes" : 

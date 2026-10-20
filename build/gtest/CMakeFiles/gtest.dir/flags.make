@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/gh02t1994/Desktop/tmp/mp2-lab1-set/include -I/Users/gh02t1994/Desktop/tmp/mp2-lab1-set/gtest
 
-CXX_FLAGSarm64 = -O3 -DNDEBUG -arch arm64
+CXX_FLAGSarm64 = -g -arch arm64
 
-CXX_FLAGS = -O3 -DNDEBUG -arch arm64
+CXX_FLAGS = -g -arch arm64
 

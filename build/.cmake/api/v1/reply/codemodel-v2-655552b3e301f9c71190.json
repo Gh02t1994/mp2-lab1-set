@@ -14,7 +14,7 @@
 						3,
 						4
 					],
-					"jsonFile" : "directory-.-Release-b23a0b23c080df4d29ba.json",
+					"jsonFile" : "directory-.-Debug-b23a0b23c080df4d29ba.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -24,7 +24,7 @@
 				},
 				{
 					"build" : "src",
-					"jsonFile" : "directory-src-Release-e92d3a436d4a05f96a17.json",
+					"jsonFile" : "directory-src-Debug-e92d3a436d4a05f96a17.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -39,7 +39,7 @@
 				},
 				{
 					"build" : "samples",
-					"jsonFile" : "directory-samples-Release-57971bfdf35121518a92.json",
+					"jsonFile" : "directory-samples-Debug-57971bfdf35121518a92.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -54,7 +54,7 @@
 				},
 				{
 					"build" : "gtest",
-					"jsonFile" : "directory-gtest-Release-8fb7794d79d21a7762e1.json",
+					"jsonFile" : "directory-gtest-Debug-8fb7794d79d21a7762e1.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -69,7 +69,7 @@
 				},
 				{
 					"build" : "test",
-					"jsonFile" : "directory-test-Release-c111cafb0d20059c0d11.json",
+					"jsonFile" : "directory-test-Debug-c111cafb0d20059c0d11.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -83,7 +83,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -110,28 +110,28 @@
 				{
 					"directoryIndex" : 3,
 					"id" : "gtest::@0af4add9fe94340e763e",
-					"jsonFile" : "target-gtest-Release-be87f4adabf924889e13.json",
+					"jsonFile" : "target-gtest-Debug-0a1e1b2bf58f22bd1d08.json",
 					"name" : "gtest",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "sample_prime_numbers::@fd003194bc69d7fb51e8",
-					"jsonFile" : "target-sample_prime_numbers-Release-ed071a517907fb01c233.json",
+					"jsonFile" : "target-sample_prime_numbers-Debug-bc6ade074744864b5bef.json",
 					"name" : "sample_prime_numbers",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "set::@145eef247bfb46b6828c",
-					"jsonFile" : "target-set-Release-67a73543f4842803af4a.json",
+					"jsonFile" : "target-set-Debug-0cc7859a8529de2b5049.json",
 					"name" : "set",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "test_set::@36f028580bb02cc8272a",
-					"jsonFile" : "target-test_set-Release-c68fbf3c804dd191b3c7.json",
+					"jsonFile" : "target-test_set-Debug-0feb052f03c2567f9bcc.json",
 					"name" : "test_set",
 					"projectIndex" : 0
 				}
